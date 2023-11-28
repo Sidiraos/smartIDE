@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const toggleSlice = createSlice({
     name: 'toggle',
-    initialState: false,
+    initialState: true,
     reducers: {
         toggle: (state) => !state ,
         hidePreview : (state) => state = false

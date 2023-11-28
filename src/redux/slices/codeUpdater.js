@@ -8,8 +8,8 @@ const initialState = [
 		logo: html,
 		code: `
         <div>
-            <h1>Editeur de code avec React</h1>
-            <p>Codez directement sur votre navigateur</p>
+            <h1>Code Editor with React</h1>
+            <p>Code directly on your browser</p>
         </div>
         `,
 	},
@@ -33,17 +33,15 @@ const initialState = [
 	},
 ];
 
-
 const codeUpdater = createSlice({
-    name : 'code-updater',
+	name: 'code-updater',
 	initialState,
-	reducers : {
-		updateCode : (state , action)=>{
-			state[action.payload.index].code = action.payload.code
+	reducers: {
+		updateCode: (state, action) => {
+			state[action.payload.index].code = action.payload.code;
 		},
-	}
+	},
 });
-
 
 export const { updateCode } = codeUpdater.actions;
 export default codeUpdater.reducer;
